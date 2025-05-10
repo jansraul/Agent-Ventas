@@ -15,10 +15,10 @@ from langgraph.prebuilt import create_react_agent
 
 ## datos de trazabilidad
 os.environ["LANGSMITH_ENDPOINT"]="https://api.smith.langchain.com"
-os.environ["LANGCHAIN_API_KEY"] = "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"
+os.environ["LANGCHAIN_API_KEY"] = "lsv2_pt_........"
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_PROJECT"] = "gcpaiagent"
-os.environ["OPENAI_API_KEY"] ="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"
+os.environ["OPENAI_API_KEY"] ="sk-proj-AZSAqqg_U0XcHG71NYp.........."
 
 
 app = Flask(__name__)
@@ -31,16 +31,16 @@ def main():
     #datos de configuracion
     DB_URI = os.environ.get(
         "DB_URI",
-        "postgresql://postgres:Inicio08$@35.239.51.157:5432/postgres"
+        "postgresql://postgres:clave....."
     )
     connection_kwargs = {
         "autocommit": True,
         "prepare_threshold": 0,
     }
     db_query = ElasticsearchStore(
-        es_url="http://34.9.191.33:9200",
+        es_url="http://0.0.0.0:9200",
         es_user="elastic",
-        es_password="V-4Qd8UyS2=ao1xL-nH2",
+        es_password="clave",
         index_name="fitadvisor-data",
         embedding=OpenAIEmbeddings())
 
