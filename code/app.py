@@ -14,10 +14,10 @@ from langgraph.prebuilt import create_react_agent
 
 
 ## datos de trazabilidad
-os.environ["LANGSMITH_ENDPOINT"]= os.environ.get("LANGSMITH_ENDPOINT")
+os.environ["LANGSMITH_ENDPOINT"]="https://api.smith.langchain.com"
 os.environ["LANGCHAIN_API_KEY"] = os.environ.get("LANGCHAIN_API_KEY")
-os.environ["LANGCHAIN_TRACING_V2"] = os.environ.get("LANGCHAIN_TRACING_V2")
-os.environ["LANGCHAIN_PROJECT"] = os.environ.get("LANGCHAIN_PROJECT")
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_PROJECT"] = "gcpaiagent"
 os.environ["OPENAI_API_KEY"] = os.environ.get("OPENAI_API_KEY")
 
 
@@ -38,8 +38,8 @@ def main():
         "prepare_threshold": 0,
     }
     db_query = ElasticsearchStore(
-        es_url= os.environ.get("es_url"),
-        es_user= os.environ.get("es_user"),
+        es_url="http://34.9.191.33:9200",
+        es_user="elastic",
         es_password=  os.environ.get("es_password"),
         index_name="fitadvisor-data",
         embedding=OpenAIEmbeddings())
