@@ -40,7 +40,7 @@ def main():
     db_query = ElasticsearchStore(
         es_url="http://34.9.191.33:9200",
         es_user="elastic",
-        es_password=  os.environ.get("es_password"),
+        es_password="V-4Qd8UyS2=ao1xL-nH2",
         index_name="fitadvisor-data",
         embedding=OpenAIEmbeddings())
 
